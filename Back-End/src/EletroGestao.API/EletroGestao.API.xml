@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>EletroGestao.API</name>
+    </assembly>
+    <members>
+        <member name="M:EletroGestao.API.V1.Controllers.Pedidos.PedidoController.Post(EletroGestao.Application.ViewModels.Pedido.PedidoAdicionarViewModel)">
+            <summary>
+            Upload planilha de Pedidos.
+            </summary>
+            <param name="viewmodel">View Model de planilha Pedidos.</param>
+            <returns>Upload planilha de pedidos realizado.</returns>
+            <remarks>
+            Exemplo de requisição
+            
+                POST /api/v1/pedido/upload
+                {
+                    "Planilha": "tipo de arquivo IFormFile"
+                }
+                
+             Campos obrigatórios: Planilha  
+             
+            </remarks>
+            <response code="200">Adicionada a planilha de pedidos com sucesso.</response>
+            <response code="400">Não foi possível adicionar a planilha de pedidos.</response>
+            
+        </member>
+        <member name="M:EletroGestao.API.V1.Controllers.Pedidos.PedidoController.GetPorTodosOsFiltros(System.Nullable{System.Guid},System.Nullable{System.Guid},System.Nullable{System.Guid},System.String,System.String,System.String,System.String,System.Nullable{System.Int32},System.Nullable{System.Int32})">
+             <summary>
+             Retorna lista paginada de Pedidos.
+             </summary>
+             <returns></returns>
+             <param name="id">Id (guid) do pedido.</param>
+             <param name="idCliente">Id do cliente.</param>
+             <param name="idProduto">Id do produto.</param>
+             <param name="nomeCliente">Nome do cliente.</param>
+             <param name="nomeProduto">Nome do produto.</param>
+             <param name="cep">CEP.</param>
+             <param name="numeroPedido">Número do pedido.</param>
+             <param name="pagina">Página da lista de item.</param>
+             <param name="tamanhoPagina">Total de itens por página.</param>
+             <response code="200">O recurso solicitado foi processado e retornado com sucesso.</response>
+            
+        </member>
+        <member name="M:EletroGestao.API.V1.Controllers.Pedidos.PedidoController.GetTotaisPedidos">
+            <summary>
+            Retorna totais dos Pedidos.
+            </summary>
+            <returns>Resultado da operação.</returns>
+            <remarks></remarks>
+            <response code="200">Exibido com sucesso totais dos pedidos.</response>
+            <response code="400">Não foi possível exibir totais dos pedidos.</response>
+            
+        </member>
+    </members>
+</doc>

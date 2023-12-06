@@ -1,0 +1,80 @@
+<ngx-spinner bdColor="rgba(0, 0, 0, 0.8)" size="medium" color="#047965" type="ball-beat" [fullScreen]="true">
+    <p style="color: white"></p>
+</ngx-spinner>
+
+<main>
+
+  <section class="hero-section d-flex justify-content-center align-items-center" id="section_1">
+      <div class="container">
+          <div class="row">
+
+              <div class="col-lg-8 col-12 mx-auto">
+                  <h2 class="text-white text-center">EletroGestão</h2>
+
+                  <h6 class="text-center text-white">O EletroGestão otimiza vendas eletrônicas com análises por região e produto.</h6>
+
+                  <form method="get" class="custom-form mt-4 pt-2 mb-lg-0 mb-5" role="search">
+                      <div class="input-group input-group-lg">
+
+                          <input name="file" id="file" formControlName="file" type="file" class="upload-box"
+                           placeholder="Insira aqui a planilha que deseja importar!" aria-label="Search"
+                           accept=".xlsx" (change)="Upload($event.target.files)">
+
+                      </div>
+                  </form>
+              </div>
+
+          </div>
+      </div>
+  </section>
+
+
+  <section class="featured-section">
+      <div class="container">
+          <div class="row justify-content-center">
+
+              <div class="col-lg-4 col-12 mb-4 mb-lg-0">
+                  <div class="custom-block bg-white shadow-lg">
+                      <a>
+                          <div class="d-flex">
+                              <div>
+                                  <h5 class="mb-2">Solução</h5>
+
+                                  <p class="mb-0" style="text-align: justify;">O EletroGestão é uma solução avançada que otimiza e analisa os 
+                                    processos de vendas no setor eletrônico, oferecendo uma gestão eficiente com 
+                                    análises detalhadas por região e produto.</p>
+                              </div>
+                          </div>
+
+                          <img src="../../../../assets/images/analise.png" class="custom-block-image img-fluid" alt="">
+                      </a>
+                  </div>
+              </div>
+
+              <div class="col-lg-6 col-12">
+                  <div class="custom-block custom-block-overlay">
+                      <div class="d-flex flex-column h-100">
+                          <img src="../../../../assets/images/grafico.jpg" class="custom-block-image img-fluid" alt="">
+
+                          <div class="custom-block-overlay-text d-flex">
+                              <div>
+                                  <h5 class="text-white mb-2">Planilha</h5>
+
+                                  <p class="text-white" style="text-align: justify;">Para começar, disponibilizamos um modelo de planilha para download. Esta planilha 
+                                    contém os campos necessários para registrar informações detalhadas sobre os pedidos, incluindo cliente, 
+                                    produto, data e outros atributos relevantes. Certifique-se de preencher a planilha de acordo com o 
+                                    modelo para uma importação bem-sucedida.</p>
+
+                                  <a class="btn custom-btn mt-2 mt-lg-3" (click)="downloadPlanilha()">Download</a>
+                              </div>
+                          </div>
+
+                          <div class="section-overlay"></div>
+                      </div>
+                  </div>
+              </div>
+
+          </div>
+      </div>
+  </section>
+</main>
